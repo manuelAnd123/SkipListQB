@@ -19,7 +19,7 @@ public class TestProgram {
             
             int executedInsertCounter = 0;
             int entriesNumber = 0;
-            int totalTraversedNodes = 0;
+            long totalTraversedNodes = 0;
 
             for (int i = 0; i < N; i++) {
                 String[] line = br.readLine().split(" ");
@@ -52,7 +52,7 @@ public class TestProgram {
                         System.out.println("Inserted (" + key + ", " + value + "), nodes visited: " + nodesVisited);
                         executedInsertCounter++;
                         entriesNumber++;
-                        totalTraversedNodes = totalTraversedNodes + nodesVisited; 
+                        totalTraversedNodes = totalTraversedNodes +(long)nodesVisited; 
                         break;
                         
                     case 3: //PRINT SKIPLIST

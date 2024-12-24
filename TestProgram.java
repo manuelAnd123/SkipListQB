@@ -19,7 +19,7 @@ public class TestProgram {
             
             int executedInsertCounter = 0;
             int entriesNumber = 0;
-            long totalTraversedNodes = 0;
+            double totalTraversedNodes = 0;
 
             for (int i = 0; i < N; i++) {
                 String[] line = br.readLine().split(" ");

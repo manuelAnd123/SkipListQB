@@ -17,9 +17,9 @@ public class TestProgram {
 
             SkipListPQ skipList = new SkipListPQ(alpha);
             
-            int executedInsertCounter = 0;
-            int entriesNumber = 0;
-            double totalTraversedNodes = 0;
+            int executedInsertCounter = 0;      //contatore degli insert eseguiti
+            int entriesNumber = 0;              //numero di entry presenti nella skip list
+            double totalTraversedNodes = 0;     //numero totale di nodi visitati
 
             for (int i = 0; i < N; i++) {
                 String[] line = br.readLine().split(" ");
@@ -50,9 +50,9 @@ public class TestProgram {
                         String value = line[2];
                         int nodesVisited = skipList.insert(key, value);
                         System.out.println("Inserted (" + key + ", " + value + "), nodes visited: " + nodesVisited);
-                        executedInsertCounter++;
-                        entriesNumber++;
-                        totalTraversedNodes = totalTraversedNodes +(long)nodesVisited; 
+                        executedInsertCounter++;                                            //incremento il contatore degli insert eseguiti
+                        entriesNumber++;                                                    //incremento il numero di entry presenti nella skip list
+                        totalTraversedNodes = totalTraversedNodes +(long)nodesVisited;      //aggiorno il numero totale di nodi visitati
                         break;
                         
                     case 3: //PRINT SKIPLIST
@@ -64,7 +64,7 @@ public class TestProgram {
                 }
             }
 
-        //prints alpha, # of entries, # of executed insert, avarage number of traversed nodes
+        //print alpha, # delle entries, # degli insert eseguiti, media dei nodi attraversati per ogni insert
         System.out.println(alpha + " " + entriesNumber + " " + executedInsertCounter + " " + totalTraversedNodes/executedInsertCounter); 
         
         } catch (IOException e) {
